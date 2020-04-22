@@ -7,12 +7,12 @@ var numero_casuale = Math.floor(Math.random() * 6) + 1;
 console.log(numero_casuale);
 
 //stampo risultato
-if (numero_utente > numero_casuale) {
-    console.log('hai vinto');
+if (isNaN(numero_utente) || numero_utente > 6 || numero_utente < 1) {
+    console.log('ripeti');
 } else if(numero_utente < numero_casuale){
     console.log('hai perso');
-} else if (isNaN(numero_utente)){
-    console.log('ripeti');
+} else if(numero_utente > numero_casuale){
+    console.log('hai vinto');
 } else {
     console.log('avete pareggiato');
 }
